@@ -1,0 +1,186 @@
+/* Overall Layout */
+.label-component {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px; /* Gap between image and component list */
+}
+
+.image-section {
+  width: 65%; /* Adjusted to give more room for the image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden;
+}
+
+.api-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover; /* Ensure the image covers the area proportionally */
+}
+
+.right-section {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.component-list {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.component-list h2 {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #0e4a8a; /* Matches the button color */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+th {
+  background-color: #e0e0e0;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.add-label-button,
+.bill-button {
+  background-color: #0e4a8a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.add-label-button:hover,
+.bill-button:hover {
+  background-color: #004080;
+}
+
+/* Form Styles */
+.label-form {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-button {
+  background-color: #0e4a8a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #004080;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .label-component {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-section,
+  .right-section {
+    width: 100%;
+  }
+
+  .right-section {
+    margin-top: 20px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .component-list {
+    padding: 15px;
+  }
+
+  table th,
+  table td {
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  .add-label-button,
+  .bill-button,
+  .submit-button {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .component-list {
+    padding: 10px;
+  }
+
+  .add-label-button,
+  .bill-button,
+  .submit-button {
+    padding: 8px 15px;
+  }
+
+  .label-form {
+    padding: 10px;
+  }
+
+  .image-section {
+    width: 100%;
+  }
+}

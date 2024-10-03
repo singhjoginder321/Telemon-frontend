@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  color: white;
+  padding: 0.2rem 1rem;
+}
+
+.header-left h1 {
+  margin: 0;
+}
+
+.header-right .signout-button {
+  background-color: #f04a5b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 0.4rem;
+}

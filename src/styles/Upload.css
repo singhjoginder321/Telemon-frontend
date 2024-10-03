@@ -1,0 +1,286 @@
+/* General Styles */
+body {
+  margin: 0;
+  overflow: auto; /* Enable scrolling for the entire body */
+}
+
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f7f9fc; /* Light background for the entire app */
+  min-height: 100vh;
+  padding: 20px;
+}
+
+h1 {
+  color: #0e4a8a;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.nav-button {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.nav-button:hover {
+  background-color: #08407a;
+}
+
+/* Main Container for Left and Right Sections */
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 30px;
+  background-color: white;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 90%;
+}
+
+/* Image Preview and Canvas Styling */
+.image-preview {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #dfe2e5;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+canvas {
+  /* width: 100%; */
+  border: 2px solid #dfe2e5;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.canvas-container {
+  width: 100%;
+  max-height: 100vh; /* Allow it to take full height of viewport */
+  overflow: auto; /* Enable scrolling within the canvas container */
+  position: relative;
+}
+
+/* Dotted Rectangle for Dragging */
+.dotted-rectangle {
+  position: absolute;
+  border: 2px dotted rgba(0, 0, 0, 0.5);
+  background-color: rgba(14, 74, 138, 0.1); /* Semi-transparent background */
+  pointer-events: none; /* Prevent it from interfering with mouse events */
+}
+
+/* Left and Right Sections */
+.left-section,
+.right-section {
+  width: 48%; /* Adjusted for better spacing */
+  padding: 20px;
+  background-color: #f1f3f5;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.left-section h2,
+.right-section h2 {
+  color: #0e4a8a;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.file-upload {
+  margin-top: 30px;
+}
+
+.file-upload input[type="file"] {
+  padding: 10px;
+  border: 2px solid #dfe2e5;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* File Upload Input input[type="file"] {
+  display: block;
+  margin: 0 auto;
+  background-color: #0e4a8a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+input[type="file"]::file-selector-button {
+  background-color: #0e4a8a;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: #08407a;
+} */
+
+/* Edit Button Styling */
+.edit-button {
+  background-color: #0e4a8a;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.edit-button.active {
+  background-color: #f04a5b;
+}
+
+.edit-button:hover {
+  background-color: #08407a;
+}
+
+.edit-button.active:hover {
+  background-color: #d93c48;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: scroll; /* Prevent overflow of the modal */
+}
+
+.close-button {
+  background-color: #f04a5b;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.dotted-rectangle {
+  position: absolute;
+  border: 2px dotted rgba(0, 0, 0, 0.5);
+  background-color: rgba(14, 74, 138, 0.1); /* Semi-transparent background */
+  pointer-events: none; /* Prevent it from interfering with mouse events */
+}
+
+/* Container styling */
+.upload-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25%;
+  width: 82%;
+  background-color: #f7f7f7;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  /* margin-top: 6rem; */
+  padding: 5rem;
+  /* background-color: #f1f3f5; */
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+}
+
+.file-upload-area {
+  width: 75%; /* 90% width as per the requirement */
+  height: 25%; /* 25% height of the container */
+  border: 2px dashed #d3d3d3; /* Dotted border */
+  border-radius: 10px;
+  background-color: #f2f2f2; /* Light grey background */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+input[type="file"] {
+  display: none; /* Hide the default file input */
+}
+
+.upload-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.drag-drop-text {
+  font-size: 16px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.upload-button {
+  background-color: #0e4a8a;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.upload-button:hover {
+  background-color: #08407a;
+}
+
+.data-format-text {
+  font-size: 14px;
+  color: #888;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+  }
+}
